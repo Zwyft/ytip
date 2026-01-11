@@ -41,24 +41,24 @@ static BOOL IsEnabled(NSString *key) {
 # pragma mark - Tweaks
 
 // Activate FLEX
-%hook YTAppDelegate
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions {
-    BOOL didFinishLaunching = %orig;
+// %hook YTAppDelegate
+// - (BOOL)application:(UIApplication *)application
+//     didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions {
+//     BOOL didFinishLaunching = %orig;
 
-    if (IsEnabled(@"flex_enabled")) {
-        [[FLEXManager sharedManager] showExplorer];
-    }
+//     // if (IsEnabled(@"flex_enabled")) {
+//     //     [[FLEXManager sharedManager] showExplorer];
+//     // }
 
-    return didFinishLaunching;
-}
-- (void)appWillResignActive:(id)arg1 {
-    %orig;
-        if (IsEnabled(@"flex_enabled")) {
-        [[FLEXManager sharedManager] showExplorer];
-    }
-}
-%end
+//     return didFinishLaunching;
+// }
+// - (void)appWillResignActive:(id)arg1 {
+//     %orig;
+//         // if (IsEnabled(@"flex_enabled")) {
+//         // [[FLEXManager sharedManager] showExplorer];
+//     // }
+// }
+// %end
 
 // Enable Alternate Icons
 %hook UIApplication
