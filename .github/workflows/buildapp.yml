@@ -109,7 +109,21 @@ jobs:
           (echo export PATH="/usr/local/opt/make/libexec/gnubin:$PATH" >> ~/.bash_profile)
           source ~/.bash_profile
           cd ${{ github.workspace }}/main
+          
+          # Debugging and Patching CydiaSubstrate
+          echo "Original CydiaSubstrate.tbd content:"
+          cat ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
+          
+          echo "Setting write permissions..."
+          chmod +w ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
+          
+          echo "Patching ios-simulator to ios..."
           sed -i '' 's/ios-simulator/ios/g' ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
+          
+          echo "Patched CydiaSubstrate.tbd content:"
+          cat ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
+          
+          # Continue with build setup
           sed -i '' "12s#.*#BUNDLE_ID = ${{ env.BUNDLE_ID }}#g" Makefile
           sed -i '' "11s#.*#DISPLAY_NAME = ${{ env.APP_NAME }}#g" Makefile
           sed -i '' "s/^PACKAGE_VERSION.*$/PACKAGE_VERSION = ${{ env.YT_VERSION }}-${{ env.YTLITE_VERSION }}/" Makefile
