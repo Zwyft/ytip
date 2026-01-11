@@ -28,8 +28,6 @@ include $(THEOS_MAKE_PATH)/aggregate.mk
 
 before-package::
 	@echo -e "==> \033[1mMoving tweak's bundle to Resources/...\033[0m"
-	@echo "Forcing MinimumOSVersion to 14.0..."
-	@plutil -replace MinimumOSVersion -string "14.0" $(YTLitePlus_IPA)/Info.plist
 	@echo "Alderis framework provided manually."
 	@cp -R Tweaks/YTLite/layout/Library/Application\ Support/YTLite.bundle Resources/
 	@cp -R Tweaks/YouPiP/layout/Library/Application\ Support/YouPiP.bundle Resources/
@@ -42,13 +40,5 @@ before-package::
 	@cp -R Tweaks/YouQuality/layout/Library/Application\ Support/YouQuality.bundle Resources/
 	@cp -R lang/YTLitePlus.bundle Resources/
 	@echo -e "==> \033[1mChanging the installation path of dylibs...\033[0m"
-	@cp Resources/libcolorpicker.dylib .
-	@ldid -r libcolorpicker.dylib
-	@install_name_tool -id @rpath/libcolorpicker.dylib libcolorpicker.dylib
-	@for dylib in .theos/obj/*.dylib libcolorpicker.dylib; do \
-		ldid -r "$$dylib"; \
-		install_name_tool -change /usr/lib/libcolorpicker.dylib @rpath/libcolorpicker.dylib "$$dylib"; \
-		install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate @rpath/CydiaSubstrate.framework/CydiaSubstrate "$$dylib"; \
-		install_name_tool -change /Library/Frameworks/Alderis.framework/Alderis @rpath/Alderis.framework/Alderis "$$dylib"; \
-	done
+	@ldid -r .theos/obj/iSponsorBlock.dylib && install_name_tool -change /usr/lib/libcolorpicker.dylib @rpath/libcolorpicker.dylib .theos/obj/iSponsorBlock.dylib
 	

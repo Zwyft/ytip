@@ -103,16 +103,6 @@ jobs:
           THEOS: ${{ github.workspace }}/theos
           YOUTUBE_URL: ${{ inputs.decrypted_youtube_url }}
 
-      - name: Download Alderis
-        run: |
-          wget -q https://repo.chariz.com/debs/ws.hbang.alderis_1.2_iphoneos-arm.deb
-          ar -x ws.hbang.alderis_1.2_iphoneos-arm.deb
-          tar -xf data.tar.lzma
-          rm -rf main/Resources/Frameworks/Alderis.framework
-          mv Library/Frameworks/Alderis.framework main/Resources/Frameworks/
-          mv usr/lib/libcolorpicker.dylib main/Resources/
-          rm -rf Library usr ws.hbang.alderis_1.2_iphoneos-arm.deb data.tar.lzma control.tar.gz debian-binary
-
       - name: Fix Compiling & Build Package
         id: build_package
         run: |
