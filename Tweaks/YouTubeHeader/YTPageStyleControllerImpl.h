@@ -1,0 +1,2 @@
+@interface YTPageStyleControllerImpl : NSObject
+@end
