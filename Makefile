@@ -28,6 +28,8 @@ include $(THEOS_MAKE_PATH)/aggregate.mk
 
 before-package::
 	@echo -e "==> \033[1mMoving tweak's bundle to Resources/...\033[0m"
+	@echo "Forcing MinimumOSVersion to 14.0..."
+	@plutil -replace MinimumOSVersion -string "14.0" $(YTLitePlus_IPA)/Info.plist
 	@echo "Alderis framework provided manually."
 	@cp -R Tweaks/YTLite/layout/Library/Application\ Support/YTLite.bundle Resources/
 	@cp -R Tweaks/YouPiP/layout/Library/Application\ Support/YouPiP.bundle Resources/
