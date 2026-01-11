@@ -12,6 +12,8 @@
 #import "../YouTubeHeader/UIView+YouTube.h"
 #import "Header.h"
 
+#define YT_TV 1
+
 static const NSInteger YTVideoOverlaySection = 1222;
 
 NSMutableArray <NSString *> *tweaks;
