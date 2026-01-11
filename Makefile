@@ -42,5 +42,13 @@ before-package::
 	@cp -R Tweaks/YouQuality/layout/Library/Application\ Support/YouQuality.bundle Resources/
 	@cp -R lang/YTLitePlus.bundle Resources/
 	@echo -e "==> \033[1mChanging the installation path of dylibs...\033[0m"
-	@ldid -r .theos/obj/iSponsorBlock.dylib && install_name_tool -change /usr/lib/libcolorpicker.dylib @rpath/libcolorpicker.dylib .theos/obj/iSponsorBlock.dylib
+	@cp Resources/libcolorpicker.dylib .
+	@ldid -r libcolorpicker.dylib
+	@install_name_tool -id @rpath/libcolorpicker.dylib libcolorpicker.dylib
+	@for dylib in .theos/obj/*.dylib libcolorpicker.dylib; do \
+		ldid -r "$$dylib"; \
+		install_name_tool -change /usr/lib/libcolorpicker.dylib @rpath/libcolorpicker.dylib "$$dylib"; \
+		install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate @rpath/CydiaSubstrate.framework/CydiaSubstrate "$$dylib"; \
+		install_name_tool -change /Library/Frameworks/Alderis.framework/Alderis @rpath/Alderis.framework/Alderis "$$dylib"; \
+	done
 	
