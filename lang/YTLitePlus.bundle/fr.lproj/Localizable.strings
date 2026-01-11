@@ -1,0 +1,117 @@
+// Settings
+"VERSION" = "YTLitePlus version : %@";
+"VERSION_CHECK" = "Appuyez pour vérifier les mises à jour !";
+
+// Video controls overlay options
+"VIDEO_CONTROLS_OVERLAY_OPTIONS" = "Options de l'overlay des contrôles vidéo";
+
+"ENABLE_SHARE_BUTTON" = "Activer le bouton Partager";
+"ENABLE_SHARE_BUTTON_DESC" = "Activer le bouton Partager dans l'overlay des contrôles vidéo.";
+
+"ENABLE_SAVE_TO_PLAYLIST_BUTTON" = "Activer le bouton 'Enregistrer dans la liste de lecture'";
+"ENABLE_SAVE_TO_PLAYLIST_BUTTON_DESC" = "Activer le bouton 'Enregistrer dans la liste de lecture' dans l'overlay des contrôles vidéo.";
+
+"HIDE_SHADOW_OVERLAY_BUTTONS" = "Masquer l'overlay sombre";
+"HIDE_SHADOW_OVERLAY_BUTTONS_DESC" = "Masquer l'overlay sombre sur les boutons Lecture/Pause, Précédent, Suivant, Avancer et Retour en arrière.";
+
+"HIDE_RIGHT_PANEL" = "Masquer le panneau de droite en mode plein écran";
+"HIDE_RIGHT_PANEL_DESC" = "Le redémarrage de l'application est requis.";
+
+"NO_SUGGESTED_VIDEO" = "Masquer la vidéo suggérée (YTNoSuggestedVideo)";
+"NO_SUGGESTED_VIDEO_DESC" = "Supprime le popup de suggestion de vidéo à la fin d'une vidéo";
+
+"HIDE_HEATWAVES" = "Masquer les Heatwaves";
+"HIDE_HEATWAVES_DESC" = "Masque les Heatwaves dans le lecteur vidéo. Le redémarrage de l'application est requis.";
+
+// App settings overlay options
+"APP_SETTINGS_OVERLAY_OPTIONS" = "Paramètres des options d'overlay de l'application";
+
+"HIDE_ACCOUNT_SECTION" = "Masquer la section \"Compte\"";
+"HIDE_DONTEATMYCONTENT_SECTION" = "Masquer la section \"DontEatMyContent\"";
+"HIDE_YOUTUBERETURNDISLIKE_SECTION" = "Masquer la section \"YouTube Return Dislike\"";
+"HIDE_YOUPIP_SECTION" = "Masquer la section \"YouPiP\"";
+"HIDE_AUTOPLAY_SECTION" = "Masquer la section \"Autoplay\"";
+"HIDE_TRYNEWFEATURES_SECTION" = "Masquer la section \"Essayer de nouvelles fonctionnalités\"";
+"HIDE_VIDEOQUALITYPREFERENCES_SECTION" = "Masquer la section \"Préférences de qualité vidéo\"";
+"HIDE_NOTIFICATIONS_SECTION" = "Masquer la section \"Notifications\"";
+"HIDE_MANAGEALLHISTORY_SECTION" = "Masquer la section \"Gérer tout l'historique\"";
+"HIDE_YOURDATAINYOUTUBE_SECTION" = "Masquer la section \"Vos données dans YouTube\"";
+"HIDE_PRIVACY_SECTION" = "Masquer la section \"Confidentialité\"";
+"HIDE_LIVECHAT_SECTION" = "Masquer la section \"Chat en direct\"";
+
+// Theme
+"THEME_OPTIONS" = "Options de thème";
+
+"OLED_DARK_THEME" = "Thème sombre OLED";
+"OLED_DARK_THEME_2" = "Thème sombre OLED";
+"OLED_DARK_THEME_DESC" = "Vrai thème sombre. Peut ne pas fonctionner correctement dans certains cas. Le redémarrage de l'application est requis après avoir activé/désactivé cette option.";
+
+"OLD_DARK_THEME" = "Ancien thème sombre";
+"OLD_DARK_THEME_DESC" = "Ancien thème sombre de YouTube (thème gris). Le redémarrage de l'application est requis.";
+
+"DEFAULT_THEME" = "Par défaut";
+"DEFAULT_THEME_DESC" = "Thème sombre (plus foncé) par défaut de YouTube. Le redémarrage de l'application est requis.";
+
+"OLED_KEYBOARD" = "Clavier OLED";
+"OLED_KEYBOARD_DESC" = "Peut ne pas fonctionner correctement dans certains cas. Le redémarrage de l'application est requis.";
+
+"LOW_CONTRAST_MODE" = "Mode faible contraste";
+"LOW_CONTRAST_MODE_DESC" = "Cette option réduira le contraste des textes et des boutons, comme l'ancienne interface YouTube. Le redémarrage de l'application est requis.";
+"LCM_SELECTOR" = "Low contrast mode selection";
+"DEFAULT_LOWCONTRASTMODE" = "(Default) LowContrastMode";
+"CUSTOM_LOWCONTRASTMODE" = "(Custom Color) LowContrastMode";
+
+// Miscellaneous
+"MISCELLANEOUS" = "Divers";
+
+"ENABLE_YT_STARTUP_ANIMATION" = "Activer l'animation de démarrage YouTube";
+"ENABLE_YT_STARTUP_ANIMATION_DESC" = "";
+
+"HIDE_MODERN_INTERFACE" = "Masquer l'interface moderne (YTNoModernUI)";
+"HIDE_MODERN_INTERFACE_DESC" = "Activez cette option pour masquer tout élément moderne ajouté par YouTube. Supprime le mode Ambiant, le design arrondi et plus encore. Un redémarrage de l'application est requis.";
+
+"IPAD_LAYOUT" = "Disposition iPad";
+"IPAD_LAYOUT_DESC" = "Utilisez ceci uniquement si vous souhaitez avoir la disposition iPad sur votre iPhone/iPod actuel. Un redémarrage de l'application est requis.";
+
+"IPHONE_LAYOUT" = "Disposition iPhone";
+"IPHONE_LAYOUT_DESC" = "Utilisez ceci uniquement si vous souhaitez avoir la disposition iPhone sur votre iPad actuel. Un redémarrage de l'application est requis.";
+
+"CAST_CONFIRM" = "Alerte de confirmation avant la diffusion (YTCastConfirm)";
+"CAST_CONFIRM_DESC" = "Affiche une alerte de confirmation avant la diffusion pour éviter de prendre accidentellement le contrôle de la télévision.";
+"CASTING" = "Casting";
+"MSG_ARE_YOU_SURE" = "Êtes-vous sûr de vouloir commencer à diffuser ?";
+"MSG_YES" = "Oui";
+"MSG_CANCEL" = "Annuler";
+
+"NEW_MINIPLAYER_STYLE" = "Nouveau style de mini-lecteur (BigYTMiniPlayer)";
+"NEW_MINIPLAYER_STYLE_DESC" = "Un redémarrage de l'application est requis.";
+
+"STOCK_VOLUME_HUD" = "Utiliser le HUD de volume iOS par défaut";
+"STOCK_VOLUME_HUD_DESC" = "";
+
+"HIDE_CAST_BUTTON" = "Masquer le bouton Cast";
+"HIDE_CAST_BUTTON_DESC" = "Un redémarrage de l'application est requis.";
+
+"HIDE_SPONSORBLOCK_BUTTON" = "Masquer le bouton iSponsorBlock dans la barre de navigation";
+"HIDE_SPONSORBLOCK_BUTTON_DESC" = "";
+
+"YT_SPEED" = "Activer YTSpeed";
+"YT_SPEED_DESC" = "Activez YTSpeed pour avoir plus d'options de vitesse de lecture. Un redémarrage de l'application est requis.";
+
+"ENABLE_FLEX" = "Activer FLEX";
+"ENABLE_FLEX_DESC" = "Activez FLEX pour le débogage (non recommandé). Laissez cette option désactivée, sauf si vous savez ce que vous faites.";
+
+"UN_SHORTS" = "Masquer les Shorts (YTUnShorts)" ;
+"UN_SHORTS_DESC" = "Supprimer les Shorts du feed de YouTube" ;
+
+"HIDE_COMMUNITY_POSTS" = "Masquer les messages de la communauté";
+"HIDE_COMMUNITY_POSTS_DESC" = "Masque les messages de la communauté. Le redémarrage de l'application est nécessaire.";
+
+// Version Spoofer
+"APP_VERSION_SPOOFER_LITE" = "Activer le Spoofer de Version de l'Application (Lite)";
+"APP_VERSION_SPOOFER_LITE_DESC" = "Activez cette option pour utiliser le Spoofer de Version de l'Application (Lite) et sélectionnez votre version préférée ci-dessous. Un redémarrage de l'application est requis.";
+"VERSION_SPOOFER_TITLE" = "Sélectionneur de Spoofer de Version";
+
+// Other Localization
+"APP_RESTART_DESC" = "Un redémarrage de l'application est requis.";
+“CHANGE_APP_ICON" = “Changer l'icône de l'application";
