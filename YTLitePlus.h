@@ -1,45 +1,45 @@
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 #import <CaptainHook/CaptainHook.h>
-#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <dlfcn.h>
-#import <sys/utsname.h>
-#import <substrate.h>
+#import <objc/runtime.h>
 #import <rootless.h>
+#import <substrate.h>
+#import <sys/utsname.h>
 
-// #import "Tweaks/FLEX/FLEX.h"
-#import "Tweaks/YouTubeHeader/YTAppDelegate.h"
-#import "Tweaks/YouTubeHeader/YTPlayerViewController.h"
-#import "Tweaks/YouTubeHeader/YTQTMButton.h"
-#import "Tweaks/YouTubeHeader/YTVideoQualitySwitchOriginalController.h"
-#import "Tweaks/YouTubeHeader/YTPlayerViewController.h"
-#import "Tweaks/YouTubeHeader/YTWatchController.h"
-#import "Tweaks/YouTubeHeader/YTIGuideResponse.h"
-#import "Tweaks/YouTubeHeader/YTIGuideResponseSupportedRenderers.h"
-#import "Tweaks/YouTubeHeader/YTIPivotBarSupportedRenderers.h"
-#import "Tweaks/YouTubeHeader/YTIPivotBarRenderer.h"
-#import "Tweaks/YouTubeHeader/YTIBrowseRequest.h"
-#import "Tweaks/YouTubeHeader/YTCommonColorPalette.h"
-#import "Tweaks/YouTubeHeader/YTSettingsSectionItemManager.h"
+#import "Tweaks/FLEX/FLEX.h"
 #import "Tweaks/YouTubeHeader/ASCollectionView.h"
-#import "Tweaks/YouTubeHeader/YTPlayerOverlay.h"
-#import "Tweaks/YouTubeHeader/YTPlayerOverlayProvider.h"
-#import "Tweaks/YouTubeHeader/YTReelWatchPlaybackOverlayView.h"
-#import "Tweaks/YouTubeHeader/YTReelPlayerBottomButton.h"
-#import "Tweaks/YouTubeHeader/YTReelPlayerViewController.h"
-#import "Tweaks/YouTubeHeader/YTAlertView.h"
-#import "Tweaks/YouTubeHeader/YTISectionListRenderer.h"
-#import "Tweaks/YouTubeHeader/YTPivotBarItemView.h"
-#import "Tweaks/YouTubeHeader/YTVideoWithContextNode.h"
 #import "Tweaks/YouTubeHeader/ELMCellNode.h"
 #import "Tweaks/YouTubeHeader/ELMNodeController.h"
+#import "Tweaks/YouTubeHeader/YTAlertView.h"
+#import "Tweaks/YouTubeHeader/YTAppDelegate.h"
+#import "Tweaks/YouTubeHeader/YTCommonColorPalette.h"
+#import "Tweaks/YouTubeHeader/YTIBrowseRequest.h"
+#import "Tweaks/YouTubeHeader/YTIGuideResponse.h"
+#import "Tweaks/YouTubeHeader/YTIGuideResponseSupportedRenderers.h"
+#import "Tweaks/YouTubeHeader/YTIPivotBarRenderer.h"
+#import "Tweaks/YouTubeHeader/YTIPivotBarSupportedRenderers.h"
+#import "Tweaks/YouTubeHeader/YTISectionListRenderer.h"
+#import "Tweaks/YouTubeHeader/YTPivotBarItemView.h"
+#import "Tweaks/YouTubeHeader/YTPlayerOverlay.h"
+#import "Tweaks/YouTubeHeader/YTPlayerOverlayProvider.h"
+#import "Tweaks/YouTubeHeader/YTPlayerViewController.h"
+#import "Tweaks/YouTubeHeader/YTQTMButton.h"
+#import "Tweaks/YouTubeHeader/YTReelPlayerBottomButton.h"
+#import "Tweaks/YouTubeHeader/YTReelPlayerViewController.h"
+#import "Tweaks/YouTubeHeader/YTReelWatchPlaybackOverlayView.h"
+#import "Tweaks/YouTubeHeader/YTSettingsSectionItemManager.h"
+#import "Tweaks/YouTubeHeader/YTVideoQualitySwitchOriginalController.h"
+#import "Tweaks/YouTubeHeader/YTVideoWithContextNode.h"
+#import "Tweaks/YouTubeHeader/YTWatchController.h"
 
 #define LOC(x) [tweakBundle localizedStringForKey:x value:nil table:nil]
 #define YT_BUNDLE_ID @"com.google.ios.youtube"
 #define YT_NAME @"YouTube"
 #define LOWCONTRASTMODE_CUTOFF_VERSION @"17.38.10"
 #define IS_ENABLED(k) [[NSUserDefaults standardUserDefaults] boolForKey:k]
-#define APP_THEME_IDX [[NSUserDefaults standardUserDefaults] integerForKey:@"appTheme"]
+#define APP_THEME_IDX                                                          \
+  [[NSUserDefaults standardUserDefaults] integerForKey:@"appTheme"]
 
 // YTSpeed
 @interface YTVarispeedSwitchControllerOption : NSObject
@@ -69,11 +69,12 @@
 @interface YTChipCloudCell : UIView
 @end
 
-@interface YTPlayabilityResolutionUserActionUIController : NSObject // Skips content warning before playing *some videos - @PoomSmart
+@interface YTPlayabilityResolutionUserActionUIController
+    : NSObject // Skips content warning before playing *some videos - @PoomSmart
 - (void)confirmAlertDidPressConfirm;
-@end 
+@end
 
-@interface YTMainAppControlsOverlayView: UIView
+@interface YTMainAppControlsOverlayView : UIView
 @end
 
 @interface YTTransportControlsButtonView : UIView
@@ -91,7 +92,7 @@
 @end
 
 @interface YTSegmentableInlinePlayerBarView
-@property (nonatomic, assign, readwrite) BOOL enableSnapToChapter;
+@property(nonatomic, assign, readwrite) BOOL enableSnapToChapter;
 @end
 
 // SponsorBlock button in Nav bar
@@ -177,7 +178,7 @@
 @interface YTCommentDetailHeaderCell : UIView
 @end
 
-@interface SponsorBlockSettingsController : UITableViewController 
+@interface SponsorBlockSettingsController : UITableViewController
 @end
 
 @interface SponsorBlockViewController : UIViewController
