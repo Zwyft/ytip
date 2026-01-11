@@ -111,17 +111,8 @@ jobs:
           cd ${{ github.workspace }}/main
           
           # Debugging and Patching CydiaSubstrate
-          echo "Original CydiaSubstrate.tbd content:"
-          cat ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
-          
-          echo "Setting write permissions..."
-          chmod +w ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
-          
-          echo "Patching ios-simulator to ios..."
-          sed -i '' 's/ios-simulator/ios/g' ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
-          
-          echo "Patched CydiaSubstrate.tbd content:"
-          cat ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
+          # Copy patched CydiaSubstrate.tbd from repo to theos
+          cp ${{ github.workspace }}/main/CydiaSubstrate.tbd ${{ github.workspace }}/theos/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
           
           # Continue with build setup
           sed -i '' "12s#.*#BUNDLE_ID = ${{ env.BUNDLE_ID }}#g" Makefile
