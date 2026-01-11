@@ -71,8 +71,11 @@ static BOOL IsEnabled(NSString *key) {
 %hook NSBundle
 - (NSDictionary *)infoDictionary {
     NSMutableDictionary *info = %orig.mutableCopy;
-    if ([self isEqual:NSBundle.mainBundle])
+    if ([self isEqual:NSBundle.mainBundle]) {
         info[@"CFBundleIdentifier"] = @"com.google.ios.youtube";
+        info[@"CFBundleShortVersionString"] = @"19.29.1";
+        info[@"CFBundleVersion"] = @"19.29.1";
+    }
     return info;
 }
 %end
