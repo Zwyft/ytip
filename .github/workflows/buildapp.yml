@@ -99,6 +99,9 @@ jobs:
           rm -rf main/tmp/Payload/YouTube.app/PlugIns/*
           # cp -R main/Extensions/*.appex main/tmp/Payload/YouTube.app/PlugIns
           echo "YTLITE_VERSION=$(grep ^PACKAGE_VERSION ${{ github.workspace }}/main/Tweaks/YTLite/Makefile | awk '{print $3}')" >> $GITHUB_ENV
+        env:
+          THEOS: ${{ github.workspace }}/theos
+          YOUTUBE_URL: ${{ inputs.decrypted_youtube_url }}
 
       - name: Download Alderis
         run: |
@@ -109,9 +112,6 @@ jobs:
           mv Library/Frameworks/Alderis.framework main/Resources/Frameworks/
           mv usr/lib/libcolorpicker.dylib main/Resources/
           rm -rf Library usr alderis_1.2_iphoneos-arm.deb data.tar.lzmacontrol.tar.gz debian-binary
-        env:
-          THEOS: ${{ github.workspace }}/theos
-          YOUTUBE_URL: ${{ inputs.decrypted_youtube_url }}
 
       - name: Fix Compiling & Build Package
         id: build_package
