@@ -97,7 +97,7 @@ jobs:
           echo "YT_VERSION=$(grep -A 1 '<key>CFBundleVersion</key>' main/tmp/Payload/YouTube.app/Info.plist | grep '<string>' | awk -F'[><]' '{print $3}')" >> $GITHUB_ENV
           rm -rf main/tmp/Payload/YouTube.app/_CodeSignature/CodeResources
           rm -rf main/tmp/Payload/YouTube.app/PlugIns/*
-          cp -R main/Extensions/*.appex main/tmp/Payload/YouTube.app/PlugIns
+          # cp -R main/Extensions/*.appex main/tmp/Payload/YouTube.app/PlugIns
           echo "YTLITE_VERSION=$(grep ^PACKAGE_VERSION ${{ github.workspace }}/main/Tweaks/YTLite/Makefile | awk '{print $3}')" >> $GITHUB_ENV
         env:
           THEOS: ${{ github.workspace }}/theos
