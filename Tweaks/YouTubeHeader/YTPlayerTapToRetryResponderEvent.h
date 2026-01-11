@@ -1,0 +1,2 @@
+@interface YTPlayerTapToRetryResponderEvent : NSObject
+@end
