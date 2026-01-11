@@ -1,0 +1,7 @@
+// Settings
+
+"VIDEO_OVERLAY" = "Sobreposição de vídeo";
+"TOP" = "Superior";
+"TOP_DESC" = "No canto superior direito, onde estão a reprodução automática, legendas, transmissão e menu flutuante.";
+"BOTTOM" = "Inferior";
+"BOTTOM_DESC" = "No canto inferior direito, onde está o botão de tela cheia.";

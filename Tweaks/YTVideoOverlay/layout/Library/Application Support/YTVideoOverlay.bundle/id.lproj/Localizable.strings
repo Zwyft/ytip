@@ -1,0 +1,7 @@
+// Settings
+
+"VIDEO_OVERLAY" = "Overlay video";
+"TOP" = "Atas";
+"TOP_DESC" = "Di sudut kanan atas, tempat putar otomatis, teks, cast, dan menu overflow berada.";
+"BOTTOM" = "Bawah";
+"BOTTOM_DESC" = "Di sudut kanan bawah, tempat tombol layar penuh berada.";
