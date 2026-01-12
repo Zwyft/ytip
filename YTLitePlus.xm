@@ -181,92 +181,11 @@ static BOOL IsEnabled(NSString *key) {
 %end
 
 // YTNoModernUI - @arichorn
+/*
 %group gYTNoModernUI
-
-
-
-
-%hook YTInlinePlayerBarContainerView // Red Progress Bar - YTNoModernUI
-- (id)quietProgressBarColor {
-    return [UIColor redColor];
-}
+    // Content disabled to fix crash and build error
 %end
-
-%hook YTSegmentableInlinePlayerBarView // Gray Buffer Progress - YTNoModernUI
-- (void)setBufferedProgressBarColor:(id)arg1 {
-     [UIColor colorWithRed:1.00 green:1.00 blue:1.00 alpha:0.90];
-}
-%end
-
-%hook YTQTMButton // No Modern/Rounded Buttons - YTNoModernUI
-+ (BOOL)buttonModernizationEnabled { return NO; }
-%end
-
-%hook YTBubbleHintView // No Modern/Rounded Hints - YTNoModernUI
-+ (BOOL)modernRoundedCornersEnabled { return NO; }
-%end
-
-%hook YTColdConfig
-// Disable Modern Content - YTNoModernUI
-- (BOOL)creatorClientConfigEnableStudioModernizedMdeThumbnailPickerForClient { return NO; }
-- (BOOL)cxClientEnableModernizedActionSheet { return NO; }
-- (BOOL)enableClientShortsSheetsModernization { return NO; }
-- (BOOL)enableTimestampModernizationForNative { return NO; }
-- (BOOL)modernizeElementsTextColor { return NO; }
-- (BOOL)modernizeElementsBgColor { return NO; }
-- (BOOL)modernizeCollectionLockups { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigEnableModernButtonsForNative { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigIosEnableModernTabsForNative { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigIosEnableEpUxUpdates { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigIosEnableSheetsUxUpdates { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigIosEnableSnackbarModernization { return NO; }
-// Disable Rounded Content - YTNoModernUI
-- (BOOL)iosDownloadsPageRoundedThumbs { return NO; }
-- (BOOL)iosRoundedSearchBarSuggestZeroPadding { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigEnableRoundedDialogForNative { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigEnableRoundedThumbnailsForNative { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigEnableRoundedThumbnailsForNativeLongTail { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigEnableRoundedTimestampForNative { return NO; }
-// Disable Darker Dark Mode - YTNoModernUI
-- (BOOL)enableDarkerDarkMode { return NO; }
-- (BOOL)useDarkerPaletteBgColorForElements { return NO; }
-- (BOOL)useDarkerPaletteTextColorForElements { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigUseDarkerPaletteTextColorForNative { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigUseDarkerPaletteBgColorForNative { return NO; }
-// Disable Ambient Mode - YTNoModernUI
-- (BOOL)disableCinematicForLowPowerMode { return NO; }
-- (BOOL)enableCinematicContainer { return NO; }
-- (BOOL)enableCinematicContainerOnClient { return NO; }
-- (BOOL)enableCinematicContainerOnTablet { return NO; }
-- (BOOL)enableTurnOffCinematicForFrameWithBlackBars { return YES; }
-- (BOOL)enableTurnOffCinematicForVideoWithBlackBars { return YES; }
-- (BOOL)iosCinematicContainerClientImprovement { return NO; }
-- (BOOL)iosEnableGhostCardInlineTitleCinematicContainerFix { return NO; }
-- (BOOL)iosUseFineScrubberMosaicStoreForCinematic { return NO; }
-- (BOOL)mainAppCoreClientEnableClientCinematicPlaylists { return NO; }
-- (BOOL)mainAppCoreClientEnableClientCinematicPlaylistsPostMvp { return NO; }
-- (BOOL)mainAppCoreClientEnableClientCinematicTablets { return NO; }
-- (BOOL)iosEnableFullScreenAmbientMode { return NO; }
-// 16.42.3 Styled YouTube Channel Page Interface - YTNoModernUI
-- (BOOL)channelsClientConfigIosChannelNavRestructuring { return NO; }
-- (BOOL)channelsClientConfigIosMultiPartChannelHeader { return NO; }
-// Disable Optional Content - YTNoModernUI
-- (BOOL)elementsClientIosElementsEnableLayoutUpdateForIob { return NO; }
-- (BOOL)supportElementsInMenuItemSupportedRenderers { return NO; }
-- (BOOL)isNewRadioButtonStyleEnabled { return NO; }
-- (BOOL)uiSystemsClientGlobalConfigEnableButtonSentenceCasingForNative { return NO; }
-- (BOOL)mainAppCoreClientEnableClientYouTab { return NO; }
-- (BOOL)mainAppCoreClientEnableClientYouLatency { return NO; }
-- (BOOL)mainAppCoreClientEnableClientYouTabTablet { return NO; }
-%end
-
-%hook YTHotConfig
-- (BOOL)liveChatIosUseModernRotationDetection { return NO; } // Disable Modern Content (YTHotConfig)
-- (BOOL)liveChatModernizeClassicElementizeTextMessage { return NO; }
-- (BOOL)iosShouldRepositionChannelBar { return NO; }
-- (BOOL)enableElementRendererOnChannelCreation { return NO; }
-%end
-%end
+*/
 
 %group gDisableAmbientMode
 %hook YTColdConfig
