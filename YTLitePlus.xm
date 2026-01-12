@@ -599,7 +599,7 @@ static NSData *cellDividerData = nil;
         %init(gHideHeatwaves);
     }
     if (IsEnabled(@"ytNoModernUI_enabled")) {
-        %init(gYTNoModernUI);
+       // %init(gYTNoModernUI);
     }
     if (IsEnabled(@"disableAmbientMode_enabled")) {
         %init(gDisableAmbientMode);
