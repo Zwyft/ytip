@@ -183,7 +183,7 @@ static BOOL IsEnabled(NSString *key) {
 // YTNoModernUI - @arichorn
 %group gYTNoModernUI
 %hook YTVersionUtils // YTNoModernUI Original Version
-+ (NSString *)appVersion { return @"17.38.10"; }
++ (NSString *)appVersion { return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]; }
 %end
 
 %hook YTSettingsCell // Remove v17.38.10 Version Number - @Dayanch96
@@ -191,9 +191,7 @@ static BOOL IsEnabled(NSString *key) {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *appVersion = infoDictionary[@"CFBundleShortVersionString"];
 
-    if ([arg1 isEqualToString:@"17.38.10"]) {
-        arg1 = appVersion;
-    } %orig(arg1);
+    %orig(arg1);
 }
 %end
 
