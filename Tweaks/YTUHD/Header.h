@@ -16,8 +16,7 @@
 #import <YouTubeHeader/YTPlayerTapToRetryResponderEvent.h>
 #import <YouTubeHeader/YTSingleVideoController.h>
 
-
-#define IOS_BUILD "20G75"
+#define IOS_BUILD "19H390"
 #define MAX_FPS 60
 #define MAX_HEIGHT 2160    // 4k
 #define MAX_PIXELS 8294400 // 3840 x 2160 (4k)
