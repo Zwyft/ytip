@@ -188,8 +188,6 @@ static BOOL IsEnabled(NSString *key) {
 
 %hook YTSettingsCell // Remove v17.38.10 Version Number - @Dayanch96
 - (void)setDetailText:(id)arg1 {
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *appVersion = infoDictionary[@"CFBundleShortVersionString"];
 
     %orig(arg1);
 }
