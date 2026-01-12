@@ -182,16 +182,9 @@ static BOOL IsEnabled(NSString *key) {
 
 // YTNoModernUI - @arichorn
 %group gYTNoModernUI
-%hook YTVersionUtils // YTNoModernUI Original Version
-+ (NSString *)appVersion { return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]; }
-%end
 
-%hook YTSettingsCell // Remove v17.38.10 Version Number - @Dayanch96
-- (void)setDetailText:(id)arg1 {
 
-    %orig(arg1);
-}
-%end
+
 
 %hook YTInlinePlayerBarContainerView // Red Progress Bar - YTNoModernUI
 - (id)quietProgressBarColor {
