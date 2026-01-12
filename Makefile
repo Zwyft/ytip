@@ -1,4 +1,4 @@
-TARGET = iphone:clang:16.4:14.0
+
 YTLitePlus_USE_FISHHOOK = 0
 ARCHS = arm64
 MODULES = jailed
@@ -15,15 +15,15 @@ EXTRA_CFLAGS := $(addprefix -I,$(shell find Tweaks/FLEX -type d)) -I$(THEOS_PROJ
 before-all::
 	sed -i '' 's/ios-simulator/ios/g' $(THEOS)/vendor/lib/CydiaSubstrate.framework/CydiaSubstrate.tbd
 
-YTLitePlus_INJECT_DYLIBS = libcolorpicker.dylib .theos/obj/iSponsorBlock.dylib .theos/obj/YouPiP.dylib .theos/obj/YouTubeDislikesReturn.dylib .theos/obj/YTABConfig.dylib .theos/obj/YouMute.dylib .theos/obj/YTHoldForSpeed.dylib .theos/obj/YTLite.dylib .theos/obj/YTVideoOverlay.dylib .theos/obj/YouGroupSettings.dylib .theos/obj/YouQuality.dylib
-YTLitePlus_FILES = YTLitePlus.xm $(shell find Source -name '*.xm' -o -name '*.x' -o -name '*.m') $(shell find Tweaks/FLEX -type f \( -iname \*.c -o -iname \*.m -o -iname \*.mm \))
+# YTLitePlus_INJECT_DYLIBS = libcolorpicker.dylib .theos/obj/iSponsorBlock.dylib .theos/obj/YouPiP.dylib .theos/obj/YouTubeDislikesReturn.dylib .theos/obj/YTABConfig.dylib .theos/obj/YouMute.dylib .theos/obj/YTHoldForSpeed.dylib .theos/obj/YTLite.dylib .theos/obj/YTVideoOverlay.dylib .theos/obj/YouGroupSettings.dylib .theos/obj/YouQuality.dylib
+YTLitePlus_FILES = YTLitePlus.xm $(shell find Source -name '*.xm' -o -name '*.x' -o -name '*.m') $(shell find Tweaks/FLEX -type d -name '*.c' -o -name '*.m' -o -name '*.mm')
 YTLitePlus_IPA = ./tmp/Payload/YouTube.app
 YTLitePlus_CFLAGS = -fobjc-arc -Wno-deprecated-declarations -Wno-unsupported-availability-guard -Wno-unused-but-set-variable -DTWEAK_VERSION=$(PACKAGE_VERSION) $(EXTRA_CFLAGS)
 YTLitePlus_FRAMEWORKS = UIKit Security
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
-SUBPROJECTS += Tweaks/iSponsorBlock Tweaks/YouPiP Tweaks/Return-YouTube-Dislikes Tweaks/YTABConfig Tweaks/YouMute Tweaks/YTLite Tweaks/YTHoldForSpeed Tweaks/YTVideoOverlay Tweaks/YouQuality Tweaks/YouGroupSettings
+# SUBPROJECTS += Tweaks/iSponsorBlock Tweaks/YouPiP Tweaks/Return-YouTube-Dislikes Tweaks/YTABConfig Tweaks/YouMute Tweaks/YTLite Tweaks/YTHoldForSpeed Tweaks/YTVideoOverlay Tweaks/YouQuality Tweaks/YouGroupSettings
 include $(THEOS_MAKE_PATH)/aggregate.mk
 
 before-package::

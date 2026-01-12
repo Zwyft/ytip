@@ -499,6 +499,7 @@ static NSData *cellDividerData = nil;
 # pragma mark - ctor
 %ctor {
     %init;
+    /*
     if (IsEnabled(@"hideCastButton_enabled")) {
         %init(gHideCastButton);
     }
@@ -556,6 +557,7 @@ static NSData *cellDividerData = nil;
     if (IsEnabled(@"disableLiveChatSection_enabled")) {
         %init(gDisableLiveChatSection);
     }
+    */
     
 
     // Change the default value of some options
