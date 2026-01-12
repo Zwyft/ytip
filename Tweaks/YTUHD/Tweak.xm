@@ -211,7 +211,7 @@ NSTimer *bufferingTimer = nil;
 %hook UIDevice
 
 - (NSString *)systemVersion {
-    return @"15.8.4";
+    return @"16.6";
 }
 
 %end
@@ -220,9 +220,9 @@ NSTimer *bufferingTimer = nil;
 
 - (NSOperatingSystemVersion)operatingSystemVersion {
     NSOperatingSystemVersion version;
-    version.majorVersion = 15;
-    version.minorVersion = 8;
-    version.patchVersion = 4;
+    version.majorVersion = 16;
+    version.minorVersion = 6;
+    version.patchVersion = 0;
     return version;
 }
 
