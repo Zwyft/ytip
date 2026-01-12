@@ -459,6 +459,7 @@ static NSData *cellDividerData = nil;
 */
 
 // Miscellaneous
+/*
 %group giPadLayout // https://github.com/LillieH001/YouTube-Reborn
 %hook UIDevice
 - (long long)userInterfaceIdiom {
@@ -481,6 +482,7 @@ static NSData *cellDividerData = nil;
 } 
 %end
 %end
+*/
 
 /*
 %group giPhoneLayout // https://github.com/LillieH001/YouTube-Reborn
