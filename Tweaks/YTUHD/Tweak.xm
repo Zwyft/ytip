@@ -249,6 +249,6 @@ NSTimer *bufferingTimer = nil;
     if (!UseVP9()) return;
     %init;
     if (!IS_IOS_OR_NEWER(iOS_15_0)) {
-        %init(Spoofing);
+        // %init(Spoofing);
     }
 }
