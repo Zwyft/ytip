@@ -105,6 +105,7 @@ static BOOL IsEnabled(NSString *key) {
 %end
 
 // Hide Video Player Cast Button
+/*
 %group gHideCastButton
 %hook MDXPlaybackRouteButtonController
 - (BOOL)isPersistentCastIconEnabled { return NO; }
@@ -115,6 +116,7 @@ static BOOL IsEnabled(NSString *key) {
 - (void)setDisableMDXDeviceDiscovery:(BOOL)arg1 { %orig(YES); }
 %end
 %end
+*/
 
 // Enable Share Button / Enable Save to Playlist Button
 %hook YTMainAppControlsOverlayView
@@ -141,6 +143,7 @@ static BOOL IsEnabled(NSString *key) {
 }
 %end
 
+/*
 %group gHideVideoPlayerShadowOverlayButtons
 %hook YTMainAppControlsOverlayView
 - (void)layoutSubviews {
@@ -153,6 +156,7 @@ static BOOL IsEnabled(NSString *key) {
 }
 %end
 %end
+*/
 
 // A/B flags
 %hook YTColdConfig 
@@ -187,6 +191,7 @@ static BOOL IsEnabled(NSString *key) {
 %end
 */
 
+/*
 %group gDisableAmbientMode
 %hook YTColdConfig
 - (BOOL)disableCinematicForLowPowerMode { return NO; }
@@ -204,13 +209,16 @@ static BOOL IsEnabled(NSString *key) {
 - (BOOL)iosEnableFullScreenAmbientMode { return NO; }
 %end
 %end
+*/
 
 // Hide YouTube Heatwaves in Video Player (YouTube v17.19.2-present) - @level3tjg - https://www.reddit.com/r/jailbreak/comments/v29yvk/
+/*
 %group gHideHeatwaves
 %hook YTInlinePlayerBarContainerView
 - (BOOL)canShowHeatwave { return NO; }
 %end
 %end
+*/
 
 %hook YTYouThereController
 - (BOOL)shouldShowYouTherePrompt { return NO; }
@@ -299,6 +307,7 @@ static NSData *cellDividerData = nil;
 %end
 
 // BigYTMiniPlayer: https://github.com/Galactic-Dev/BigYTMiniPlayer
+/*
 %group Main
 %hook YTWatchMiniBarView
 - (void)setWatchMiniPlayerLayout:(int)arg1 {
@@ -322,8 +331,10 @@ static NSData *cellDividerData = nil;
 }
 %end
 %end
+*/
 
 // YTSpeed - https://github.com/Lyvendia/YTSpeed
+/*
 %group gYTSpeed
 %hook YTVarispeedSwitchController
 - (id)init {
@@ -371,8 +382,10 @@ static NSData *cellDividerData = nil;
 }
 %end
 %end
+*/
 
 // YTStockVolumeHUD - https://github.com/lilacvibes/YTStockVolumeHUD
+/*
 %group gStockVolumeHUD
 %hook YTVolumeBarView
 - (void)volumeChanged:(id)arg1 {
@@ -386,8 +399,10 @@ static NSData *cellDividerData = nil;
 }
 %end
 %end
+*/
 
 // App Settings Overlay Options
+/*
 %group gDisableAccountSection
 %hook YTSettingsSectionItemManager
 - (void)updateAccountSwitcherSectionWithEntry:(id)arg1 {} // Account
@@ -441,6 +456,7 @@ static NSData *cellDividerData = nil;
 - (void)updateLiveChatSectionWithEntry:(id)arg1 {} // Live chat
 %end
 %end
+*/
 
 // Miscellaneous
 %group giPadLayout // https://github.com/LillieH001/YouTube-Reborn
@@ -466,10 +482,11 @@ static NSData *cellDividerData = nil;
 %end
 %end
 
+/*
 %group giPhoneLayout // https://github.com/LillieH001/YouTube-Reborn
 %hook UIDevice
 - (long long)userInterfaceIdiom {
-    return NO;
+    return YES;
 } 
 %end
 %hook UIStatusBarStyleAttributes
@@ -488,6 +505,7 @@ static NSData *cellDividerData = nil;
 } 
 %end
 %end
+*/
 
 // YT startup animation
 %hook YTColdConfig
